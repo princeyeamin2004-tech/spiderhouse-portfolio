@@ -1,1 +1,326 @@
-<!DOCTYPE html><html lang="en">  <head>    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <title>Spider House | Cybersecurity Portfolio</title>    <style>      :root {        --bg-color: #0a0e17;        --card-bg: #111827;        --accent-green: #00ff66;        --accent-cyan: #00f0ff;        --text-main: #e2e8f0;        --text-muted: #94a3b8;        --border-color: #1e293b;      }      * {        box-sizing: border-box;        margin: 0;        padding: 0;        font-family: 'Courier New', Courier, monospace;      }      body {        background-color: var(--bg-color);        color: var(--text-main);        line-height: 1.6;        padding: 20px;      }      header {        text-align: center;        padding: 40px 20px;        border-bottom: 2px dashed var(--border-color);        margin-bottom: 30px;      }      .terminal-prompt {        color: var(--accent-green);        font-size: 0.9rem;        margin-bottom: 10px;      }      h1 {        font-size: 2.2rem;        color: var(--accent-cyan);        margin-bottom: 10px;        letter-spacing: 1px;      }      .subtitle {        color: var(--text-muted);        font-size: 1.1rem;      }      .container {        max-width: 900px;        margin: 0 auto;      }      section {        background: var(--card-bg);        border: 1px solid var(--border-color);        border-radius: 6px;        padding: 25px;        margin-bottom: 25px;        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);      }      h2 {        color: var(--accent-green);        font-size: 1.3rem;        margin-bottom: 15px;        border-bottom: 1px solid var(--border-color);        padding-bottom: 8px;      }      p,      li {        color: var(--text-main);        font-size: 0.95rem;        margin-bottom: 10px;      }      ul {        list-style-type: none;        padding-left: 0;      }      ul li::before {        content: '> ';        color: var(--accent-cyan);      }      .badge-grid {        display: flex;        flex-wrap: wrap;        gap: 10px;        margin-top: 15px;      }      .badge {        background: #1e293b;        color: var(--accent-cyan);        padding: 6px 12px;        border-radius: 4px;        font-size: 0.85rem;        border: 1px solid rgba(0, 240, 255, 0.2);      }      footer {        text-align: center;        padding: 20px;        color: var(--text-muted);        font-size: 0.85rem;        border-top: 1px solid var(--border-color);        margin-top: 40px;      }      @media (max-width: 600px) {        h1 {          font-size: 1.8rem;        }        body {          padding: 10px;        }        section {          padding: 15px;        }      }    </style></head>  <body>    <div class="container">      <header>        <div class="terminal-prompt">root@spiderhouse:~# whoami</div>        <h1>Spider House</h1>        <div class="subtitle">          Cybersecurity Aspirant &bull; SOC Analyst &amp; Penetration Tester          Focus        </div>      </header>      <section>        <h2>// About Me</h2>        <p>          Final-year Computer Science and Engineering student at Southeast          University, Dhaka, Bangladesh. Deeply passionate about network defense          infrastructure, security operations, and protecting critical digital          assets.        </p>      </section>      <section>        <h2>// Core Technical Skills</h2>        <div class="badge-grid">          <span class="badge">C / C++ / Java</span>          <span class="badge">Socket Programming</span>          <span class="badge">Network Defense</span>          <span class="badge">XAMPP / Apache / MySQL</span>          <span class="badge">Machine Learning Security</span>          <span class="badge">Python Automation</span>        </div>      </section>      <section>        <h2>// Featured Projects &amp; Work</h2>        <ul>          <li>            <strong>Custom FTP Server:</strong> Designed and deployed socket            programming network communication protocols on GitHub.          </li>          <li>            <strong>Matrix QR Code Generator:</strong> Programmatically built            embedded data configurations for digital staff identification cards.          </li>          <li>            <strong>ML Security Research:</strong> Executing final-year academic            research focusing on machine learning systems, security            architectures, and privacy-preserving setups.          </li>        </ul>      </section>      <section>        <h2>// Certifications &amp; Training</h2>        <ul>          <li>            <strong>OPSWAT Academy:</strong> Introduction to Critical            Infrastructure Protection (CIP).          </li>        </ul>      </section>      <section>        <h2>// Connect &amp; Collaborate</h2>        <p>          Targeting professional roles in Security Operations Centers (SOC) and          Penetration Testing. Let's secure the infrastructure together.        </p>        <div class="badge-grid">          <span class="badge">Location: Dhaka, Bangladesh</span>          <span class="badge">Status: Final-Year CSE Student</span>        </div>      </section>      <footer>        <p>          &copy; 2026 Spider House. All rights reserved. Built with terminal          aesthetics.        </p>      </footer>    </div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider House | Cybersecurity Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0a0e17;
+            --card-bg: #111827;
+            --accent-green: #00ff66;
+            --accent-cyan: #00f0ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Top Fixed Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 14, 23, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-logo {
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Three Dots / Menu Toggle for Mobile Screens */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-cyan);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px dashed var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .terminal-prompt {
+            color: var(--accent-green);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 255, 102, 0.1);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: transparent;
+            color: var(--accent-cyan);
+            border: 1px solid var(--accent-cyan);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+
+        .btn-primary {
+            background: rgba(0, 255, 102, 0.1);
+            color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-green);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: var(--accent-green);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        p, li {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: "> ";
+            color: var(--accent-cyan);
+        }
+
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: var(--accent-cyan);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <nav>
+        <a href="#" class="nav-logo">~/spiderhouse</a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#8942;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="terminal-prompt">root@spiderhouse:~# whoami</div>
+            <h1>Spider House</h1>
+            <div class="subtitle">Cybersecurity Aspirant &bull; SOC Analyst &amp; Penetration Tester Focus</div>
+            
+            <div class="status-badge">&#9679; STATUS: AVAILABLE FOR SOC / PENTEST ROLES</div>
+
+            <div class="action-buttons">
+                <a href="#" class="btn btn-primary" onclick="alert('Resume download link coming soon!')">Download Resume</a>
+                <a href="https://github.com/princeyeamin2004-tech" target="_blank" class="btn">GitHub Profile</a>
+                <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>// About Me</h2>
+            <p>Final-year Computer Science and Engineering student at Southeast University, Dhaka, Bangladesh. Deeply passionate about network defense infrastructure, security operations, and protecting critical digital assets.</p>
+        </section>
+
+        <section id="skills">
+            <h2>// Core Technical Skills</h2>
+            <div class="badge-grid">
+                <span class="badge">C / C++ / Java</span>
+                <span class="badge">Socket Programming</span>
+                <span class="badge">Network Defense</span>
+                <span class="badge">XAMPP / Apache / MySQL</span>
+                <span class="badge">Machine Learning Security</span>
+                <span class="badge">Python Automation</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>// Featured Projects &amp; Work</h2>
+            <ul>
+                <li><strong>Custom FTP Server:</strong> Designed and deployed socket programming network communication protocols on GitHub.</li>
+                <li><strong>Matrix QR Code Generator:</strong> Programmatically built embedded data configurations for digital staff identification cards.</li>
+                <li><strong>ML Security Research:</strong> Executing final-year academic research focusing on machine learning systems, security architectures, and privacy-preserving setups.</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>// Certifications &amp; Training</h2>
+            <ul>
+                <li><strong>OPSWAT Academy:</strong> Introduction to Critical Infrastructure Protection (CIP).</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>// Connect &amp; Collaborate</h2>
+            <p>Targeting professional roles in Security Operations Centers (SOC) and Penetration Testing. Let's secure the infrastructure together.</p>
+            <div class="badge-grid">
+                <span class="badge">Location: Dhaka, Bangladesh</span>
+                <span class="badge">Status: Final-Year CSE Student</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Spider House. All rights reserved. Built with terminal aesthetics.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
