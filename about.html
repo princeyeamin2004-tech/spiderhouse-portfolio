@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Spider House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0e17;
+            --card-bg: #111827;
+            --accent-green: #00ff66;
+            --accent-cyan: #00f0ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-top: 80px; }
+
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(10, 14, 23, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 25px; z-index: 1000; backdrop-filter: blur(8px);
+        }
+
+        .nav-logo {
+            color: var(--accent-cyan); font-weight: bold; font-size: 0.95rem;
+            text-decoration: none; background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.3); padding: 6px 14px;
+            border-radius: 6px; letter-spacing: 1px; display: inline-flex;
+            align-items: center; gap: 10px;
+        }
+
+        .nav-logo img { height: 26px; width: 26px; object-fit: contain; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        section {
+            background: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 6px; padding: 25px; margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 { color: var(--accent-cyan); margin-bottom: 15px; font-size: 1.8rem; }
+        h2 { color: var(--accent-green); font-size: 1.2rem; margin-bottom: 15px; border-left: 4px solid var(--accent-green); padding-left: 10px; }
+        p { color: var(--text-main); font-size: 0.95rem; margin-bottom: 15px; }
+        
+        .back-btn {
+            display: inline-block; color: var(--bg-color); background: var(--accent-cyan);
+            padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: bold;
+            margin-top: 15px; transition: 0.3s;
+        }
+        .back-btn:hover { background: var(--accent-green); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="Spider House Logo">
+            SPIDER HOUSE
+        </a>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h1>// Profile Overview & Academic Background</h1>
+            <p>Final-year Computer Science and Engineering undergraduate at Southeast University, Dhaka, Bangladesh. Dedicated to security operations, penetration testing, and protecting infrastructure against modern digital threats.</p>
+            
+            <h2>// Academic Milestones</h2>
+            <p>Solid training across core software engineering disciplines, computer networking, relational database management (XAMPP/MySQL), operating systems, and privacy-preserving machine learning architectures.</p>
+
+            <a href="index.html" class="back-btn">&lt; Return to Main Terminal</a>
+        </section>
+    </div>
+
+</body>
+</html>

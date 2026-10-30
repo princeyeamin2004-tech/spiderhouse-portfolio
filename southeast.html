@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southeast University Archive | Spider House</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0a0e17;
+            --card-bg: #111827;
+            --accent-green: #00ff66;
+            --accent-cyan: #00f0ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 14, 23, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 25px;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-logo {
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-decoration: none;
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            padding: 6px 14px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            padding: 6px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px dashed var(--border-color);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            background: var(--card-bg);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: var(--accent-green);
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            background: rgba(0, 255, 102, 0.05);
+            border-left: 4px solid var(--accent-green);
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 12px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            color: var(--text-main);
+            font-size: 0.92rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed rgba(30, 41, 59, 0.6);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: "> ";
+            color: var(--accent-cyan);
+        }
+
+        .sub-desc {
+            color: var(--text-muted);
+            font-size: 0.83rem;
+            margin-top: 3px;
+            padding-left: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 40px;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <i class="fa-solid fa-shield-halved"></i> SEUT_ARCHIVE
+        </div>
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Southeast University Archive</h1>
+            <div class="subtitle">Detailed Academic Records &amp; Modules</div>
+        </header>
+
+        <!-- [ 01 ] ACADEMIC ROOT -->
+        <section>
+            <h2>[ 01 ] ACADEMIC ROOT</h2>
+            <ul>
+                <li>
+                    <strong>Final-Year Undergraduate Status</strong>
+                    <div class="sub-desc">Computer Science and Engineering department tracking toward graduation.</div>
+                </li>
+                <li>
+                    <strong>Campus Life &amp; Memories</strong>
+                    <div class="sub-desc">Bottola social sessions, student group coordination, and regional excursions.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- [ 02 ] MENTORSHIP -->
+        <section>
+            <h2>[ 02 ] MENTORSHIP</h2>
+            <ul>
+                <li>
+                    <strong>Technical Instruction Experience</strong>
+                    <div class="sub-desc">Over 6 years of experience working as a private tutor teaching science modules and ICT curriculum.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- [ 03 ] CORE SPECIALIZATION -->
+        <section>
+            <h2>[ 03 ] CORE SPECIALIZATION</h2>
+            <ul>
+                <li>
+                    <strong>Cyber Security Focus</strong>
+                    <div class="sub-desc">Targeting professional roles as a SOC Analyst or Network Security and Penetration Tester.</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- [ 04 ] LAB DEPLOYMENTS -->
+        <section>
+            <h2>[ 04 ] LAB DEPLOYMENTS</h2>
+            <ul>
+                <li>
+                    <strong>Custom Sockets &amp; Networks</strong>
+                    <div class="sub-desc">Client-server socket programming, FTP architectures, and Software-Defined Networking projects.</div>
+                </li>
+                <li>
+                    <strong>Database &amp; Tool Infrastructure</strong>
+                    <div class="sub-desc">XAMPP, Apache, MySQL service engines, and programmatic identity generators.</div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Spider House. Southeast University Academic Records.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
